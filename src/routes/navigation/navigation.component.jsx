@@ -9,17 +9,20 @@ const Navigation = () => {
         <Link to="/">
           <Logo className="logo" />
         </Link>
-      </div>
-      <div className="nav-links-container">
-        <Link to="/about" className="nav-link">
-          About
-        </Link>
-        <Link to="/contact" className="nav-link">
-          Contact
-        </Link>
-        <Link to="/sign-in" className="nav-link">
-          Sign In
-        </Link>
+
+        <div className="nav-container">
+          <div className="nav-links-container">
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
+            <Link to="/contact" className="nav-link">
+              Contact
+            </Link>
+            <Link to="/sign-in" className="nav-link">
+              Sign In
+            </Link>
+          </div>
+        </div>
       </div>
       <Outlet />
     </Fragment>
