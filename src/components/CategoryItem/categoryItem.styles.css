@@ -1,4 +1,4 @@
-.category-container {
+/* .category-container {
   width: 300px;
   height: 300px;
   border: 1px solid #ddd;
@@ -28,6 +28,70 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.category-body-container h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.shopNow {
+  font-size: 16px;
+  margin-bottom: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.category-body-container p:hover {
+  color: #f2f2f2;
+  text-decoration: none;
+} */
+
+.category-container {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px;
+  position: relative;
+  perspective: 1000px; /* Perspective for 3D transforms */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  transition: transform 0.3s ease-in-out; /* Animation for image transformation */
+}
+
+.category-container:hover .background-image {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.category-body-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%); /* Initial hidden state */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Animation for appearing */
+}
+
+.category-container:hover .category-body-container {
+  opacity: 1;
+  transform: translateY(0); /* Slide up the container on hover */
 }
 
 .category-body-container h2 {
